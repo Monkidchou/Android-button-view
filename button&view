@@ -1,0 +1,52 @@
+
+
+public class MainActivity extends AppCompatActivity {
+    //在main class中宣告 :  private 類別(Button or TextView) new_name(use in java not id name)
+    private TextView view;
+    private Button button_red;
+    private Button button_green;
+    private Button button_blue;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //讀取圖片為bitmap
+        //InputStream is =this.getResources().openRawResource(R.drawable.elephant);
+        //Bitmap footbm = BitmapFactory.decodeStram(is);
+
+
+
+        //Utils.bitmapToMat(footbm,mat);
+
+        //宣告按鈕
+        button_red= (Button) findViewById(R.id.button_red);
+        button_green = (Button) findViewById(R.id.button_green);
+        button_blue = (Button) findViewById(R.id.button_blue);
+
+        view=(TextView) findViewById(R.id.textView);
+
+        button_red.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                view.setText("紅遮罩");
+            }
+        });
+        button_green.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                view.setText("綠遮罩");
+            }
+        });
+        button_blue.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                view.setText("藍遮罩");
+            }
+        });
+
+    }
+
+
+
+    }
